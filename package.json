@@ -1,0 +1,28 @@
+{
+  "name": "verilog-pinlist",
+  "version": "0.1.0",
+  "description": "extract pinlist from verilog files",
+  "main": "index.js",
+  "bin": {
+    "pinlist": "./bin/pinlist.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/verilog-pinlist.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/verilog-pinlist/issues"
+  },
+  "homepage": "https://github.com/drom/verilog-pinlist#readme",
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "tree-sitter": "^0.13.23",
+    "tree-sitter-verilog": "^0.8.0",
+    "yargs": "^12.0.5"
+  }
+}
