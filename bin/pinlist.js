@@ -13,12 +13,12 @@ const readFile = util.promisify(fs.readFile);
 const pinlister = lib();
 
 const argv = yargs
-    .option('verbose', {
-        alias: 'v',
-        default: false
-    })
-    .help()
-    .argv;
+  .option('verbose', {
+    alias: 'v',
+    default: false
+  })
+  .help()
+  .argv;
 
 (async (files) => {
 
@@ -27,7 +27,7 @@ const argv = yargs
     const source = await readFile(pat, 'utf-8');
     console.log(source);
     console.log(pinlister(source));
-  })
+  });
 
 })(argv._);
 // console.log(pinlister(source));

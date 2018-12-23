@@ -7,13 +7,13 @@
     "pinlist": "./bin/pinlist.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint lib/ && mocha test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drom/verilog-pinlist.git"
   },
-  "author": "",
+  "author": "Aliaksei Chapyzhenka",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/drom/verilog-pinlist/issues"
@@ -22,7 +22,23 @@
   "dependencies": {
     "fs-extra": "^7.0.1",
     "tree-sitter": "^0.13.23",
-    "tree-sitter-verilog": "^0.8.0",
+    "tree-sitter-verilog": "^0.9.0",
     "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "@drom/eslint-config": "^0.7.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.11.0",
+    "mocha": "^5.2.0"
+  },
+  "eslintConfig": {
+    "extends": "@drom/eslint-config/eslint4/node4",
+    "rules": {
+      "indent": [1, 2],
+      "no-console": 1
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017
+    }
   }
 }
