@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 'use strict';
 
-const yargs = require('yargs');
-const fs = require('fs-extra');
 const path = require('path');
 const util = require('util');
+
+const fs = require('fs-extra');
+const JSON5 = require('json5');
+const yargs = require('yargs');
 
 const lib = require('../lib/index.js');
 
@@ -25,8 +27,9 @@ const argv = yargs
   files.map(async file => {
     const pat = path.resolve(process.cwd(), file);
     const source = await readFile(pat, 'utf-8');
-    console.log(source);
-    console.log(pinlister(source));
+    // console.log(source);
+    const pins = pinlister(source);
+    console.log(JSON5.stringify(pins, null, 2));
   });
 
 })(argv._);

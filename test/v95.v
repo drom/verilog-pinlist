@@ -5,7 +5,7 @@ module Atop (a, b, c, d);
   input a;
   input [3:0] b, c;
   output [W-1:0] d;
-
+  inout b;
 
 
 
