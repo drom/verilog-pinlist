@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/drom/verilog-pinlist#readme",
   "dependencies": {
+    "concat-stream": "^2.0.0",
     "fs-extra": "^7.0.1",
     "json5": "^2.1.0",
     "mathjs": "^5.4.1",

@@ -1,36 +1,38 @@
 #!/usr/bin/env node
 'use strict';
 
-const path = require('path');
-const util = require('util');
-
-const fs = require('fs-extra');
-const JSON5 = require('json5');
 const yargs = require('yargs');
+const JSON5 = require('json5');
+const concat = require('concat-stream');
 
 const lib = require('../lib/index.js');
-
-const readFile = util.promisify(fs.readFile);
-
-const pinlister = lib();
 
 const argv = yargs
   .option('verbose', {
     alias: 'v',
     default: false
   })
+  .version()
   .help()
   .argv;
 
-(async (files) => {
+const pinlister = lib();
 
-  files.map(async file => {
-    const pat = path.resolve(process.cwd(), file);
-    const source = await readFile(pat, 'utf-8');
-    // console.log(source);
-    const pins = pinlister(source);
-    console.log(JSON5.stringify(pins, null, 2));
-  });
+function gotInput (source) {
+  const pins = pinlister(source);
+  console.log(JSON5.stringify(pins, null, 2));
+}
 
-})(argv._);
-// console.log(pinlister(source));
+const concatStream = concat(gotInput);
+
+let source;
+
+// if (process.stdin.isTTY) {
+source = process.stdin.setEncoding('ascii');
+// }
+
+if (source) {
+  source.pipe(concatStream);
+} else {
+  yargs.showHelp();
+}
