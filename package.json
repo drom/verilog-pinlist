@@ -4,7 +4,8 @@
   "description": "extract pinlist from verilog files",
   "main": "./lib/index.js",
   "bin": {
-    "pinlist": "./bin/pinlist.js"
+    "pinlist": "./bin/pinlist.js",
+    "pinlist-simple": "./bin/pinlist-simple.js"
   },
   "scripts": {
     "test": "eslint lib/ && nyc --reporter=lcov mocha"

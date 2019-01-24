@@ -10,7 +10,7 @@ describe('v95', () => {
   it('input 1', () => {
     expect(pl(`
 module mod (a);
-  input a, b;
+  input wire a, b;
   output c, d, e;
   input [31:0] f, g;
   output [W-1:0] h, k;
@@ -37,14 +37,14 @@ describe('ansi', () => {
 module mod #(
 
 )(
-  input a, b,
-  output c, d, e,
+  input wire                                  aaaa , b ,
+  output c,   d,  e,
   input [31:0] f, g
 );
 
 endmodule
     `)).deep.eq({
-      a: 1, b: 1,
+      aaaa: 1, b: 1,
       c: -1, d: -1, e: -1,
       f: 32, g: 32
     });
