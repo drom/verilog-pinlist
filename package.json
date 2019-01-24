@@ -1,6 +1,6 @@
 {
   "name": "pinlist",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "extract pinlist from verilog files",
   "main": "./lib/index.js",
   "bin": {
