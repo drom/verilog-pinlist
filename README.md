@@ -1,5 +1,5 @@
 [![NPM version](https://img.shields.io/npm/v/pinlist.svg)](https://www.npmjs.org/package/pinlist)
-[![Travis ](https://travis-ci.org/drom/pinlist.svg?branch=master)](https://travis-ci.org/drom/pinlist)
+[![Travis ](https://travis-ci.org/drom/verilog-pinlist.svg?branch=master)](https://travis-ci.org/drom/verilog-pinlist)
 
 Extract pinlist from Verilog files.
 
