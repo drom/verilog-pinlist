@@ -32,6 +32,24 @@ endmodule
 
 describe('ansi', () => {
 
+  it('simple', () => {
+    expect(pl(`
+module mod (
+  input clk,
+  input [31:0] wdata,
+  output valid,
+  output reg [DWIDTH-1:0] rdata
+);
+
+endmodule
+    `)).deep.eq({
+      clk: 1,
+      rdata: '-(DWIDTH)',
+      valid: -1,
+      wdata: 32
+    });
+  });
+
   it('input 1', () => {
     expect(pl(`
 module mod #(
