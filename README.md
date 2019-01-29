@@ -42,3 +42,9 @@ const pinst = pl(`
 ```sh
 cat top.v | pinlist > alpha.json5
 ```
+
+Verilator can be used to remove preprocessor directives:
+
+```sh
+verilator -E top.v | pinlist > alpha.json5
+```
