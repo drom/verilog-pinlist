@@ -9,7 +9,7 @@ describe('v95', () => {
 
   it('simple', () => {
     expect(pl(`
-module mod (clk, wdata, valid, rdata);
+module foo (clk, wdata, valid, rdata);
   input clk;
   input wire [31:0] wdata;
   output valid;
@@ -17,11 +17,15 @@ module mod (clk, wdata, valid, rdata);
 
 endmodule
     `)).deep.eq({
-      clk: 1,
-      rdata: '-(DWIDTH)',
-      valid: -1,
-      wdata: 32,
-      undefined: -1 // FIXME
+      foo: {
+        type: 'module',
+        ports: {
+          clk: 1,
+          rdata: '-(DWIDTH)',
+          valid: -1,
+          wdata: 32
+        }
+      }
     });
   });
 
@@ -31,7 +35,7 @@ describe('ansi', () => {
 
   it('simple', () => {
     expect(pl(`
-module mod (
+module bar (
   input clk,
   input [31:0] wdata,
   output valid,
@@ -40,10 +44,15 @@ module mod (
 
 endmodule
     `)).deep.eq({
-      clk: 1,
-      rdata: '-(DWIDTH)',
-      valid: -1,
-      wdata: 32
+      bar: {
+        type: 'module',
+        ports: {
+          clk: 1,
+          rdata: '-(DWIDTH)',
+          valid: -1,
+          wdata: 32
+        }
+      }
     });
   });
 

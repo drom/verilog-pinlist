@@ -28,12 +28,16 @@ const pinst = pl(`
   endmodule
 
 `);
-// {
-//   clk: 1,
-//   rdata: '-(DWIDTH)',
-//   valid: -1,
-//   wdata: 32
-// }
+//  {
+//    mod: {
+//      type: 'module',
+//      ports: {
+//        clk: 1,
+//        rdata: '-(DWIDTH)',
+//        valid: -1,
+//        wdata: 32
+//     }
+//  }
 
 ```
 
