@@ -9,6 +9,7 @@ describe('v95', () => {
 
   it('simple', () => {
     expect(pl(`
+\`line 10 "bar" 42
 module foo (clk, wdata, valid, rdata);
   input clk;
   input wire [31:0] wdata;
