@@ -14,6 +14,9 @@ module foo (clk, wdata, valid, rdata);
   input clk;
   input wire [31:0] wdata;
   output valid;
+  input foo, bar;
+  input wire [15:0] wdata0, wdata1;
+  output baz, qux;
   output [DWIDTH-1:0] rdata;
 
 endmodule
@@ -22,9 +25,15 @@ endmodule
         type: 'module',
         ports: {
           clk: 1,
+          foo: 1,
+          bar: 1,
+          baz: -1,
+          qux: -1,
           rdata: '-(DWIDTH)',
           valid: -1,
-          wdata: 32
+          wdata: 32,
+          wdata0: 16,
+          wdata1: 16
         }
       }
     });
