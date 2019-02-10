@@ -34,7 +34,8 @@
     "chai": "^4.2.0",
     "eslint": "^5.13.0",
     "mocha": "^5.2.0",
-    "nyc": "^13.2.0"
+    "nyc": "^13.2.0",
+    "request": "^2.88.0"
   },
   "eslintConfig": {
     "extends": "@drom/eslint-config/eslint4/node8"
