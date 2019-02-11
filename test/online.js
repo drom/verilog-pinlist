@@ -10,7 +10,7 @@ const expect = chai.expect;
 const pl = lib();
 
 const links = {
-  // 'https://raw.githubusercontent.com/parallella/oh/master/src/axi/hdl/emaxi.v': {emaxi: 60},
+  'https://raw.githubusercontent.com/parallella/oh/master/src/axi/hdl/emaxi.v': {emaxi: 49},
   'https://raw.githubusercontent.com/parallella/oh/master/src/aes/hdl/aes_128.v': {aes_128: 4, expand_key_128: 5},
   'https://raw.githubusercontent.com/parallella/oh/master/src/accelerator/hdl/axi_accelerator.v': {axi_accelerator: 81},
   'https://raw.githubusercontent.com/parallella/oh/master/src/spi/hdl/axi_spi.v': {axi_spi: 50},
