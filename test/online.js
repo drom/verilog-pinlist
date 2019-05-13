@@ -18,7 +18,8 @@ const links = {
   'https://raw.githubusercontent.com/analogdevicesinc/hdl/master/library/axi_ad9963/axi_ad9963_rx.v': {axi_ad9963_rx: 29},
 };
 
-describe('online', () => {
+describe('online', function () {
+  this.timeout(10000);
   Object.keys(links).forEach((link, i) => {
     it('l' + i, done => {
       request(link, (error, response, body) => {
