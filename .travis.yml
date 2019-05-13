@@ -1,15 +1,25 @@
-os:
-  - linux
-  - osx
-sudo: false
+os: linux
+dist: trusty
+sudo: required
+language: node_js
+node_js:
+  - "12"
+  - "11"
+  - "10"
+  - "9"
+  - "8"
 env:
-  matrix:
-  - TRAVIS_NODE_VERSION="11"
-  - TRAVIS_NODE_VERSION="10"
-  - TRAVIS_NODE_VERSION="8"
-  - TRAVIS_NODE_VERSION="6"
+  - CXX=g++-7
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
 install:
-  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - g++ --version
   - npm --version
-  - npm install
+  - time npm install
+  - wc -l src/parser.c
+  - wc -c build/Release/*.node
 script: npm test
