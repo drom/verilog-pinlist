@@ -1,4 +1,7 @@
-os: linux
+os:
+  - linux
+  - osx
+  - windows
 dist: trusty
 sudo: required
 language: node_js
