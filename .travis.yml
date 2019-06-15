@@ -2,24 +2,25 @@ os:
   - linux
   - osx
   - windows
-dist: trusty
-sudo: required
+# dist: trusty
+# sudo: required
 language: node_js
 node_js:
+  - "12"
   - "11"
   - "10"
   - "9"
   - "8"
   - "7"
   - "6"
-env:
-  - CXX=g++-7
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-7
+# env:
+#   - CXX=g++-7
+# addons:
+#   apt:
+#     sources:
+#       - ubuntu-toolchain-r-test
+#     packages:
+#       - g++-7
 install:
   - g++ --version
   - npm --version
