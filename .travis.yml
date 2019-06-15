@@ -1,18 +1,17 @@
-os:
-  - linux
-  - osx
-  - windows
-# dist: trusty
-# sudo: required
 language: node_js
 node_js:
-  - "12"
   - "11"
   - "10"
   - "9"
   - "8"
   - "7"
   - "6"
+os:
+  - linux
+  - osx
+  - windows
+sudo: false
+# dist: trusty
 # env:
 #   - CXX=g++-7
 # addons:
@@ -24,5 +23,5 @@ node_js:
 install:
   - g++ --version
   - npm --version
-  - time npm install
+  - npm install
 script: npm test
