@@ -26,7 +26,7 @@
     "json5": "^2.1.0",
     "mathjs": "^6.0.2",
     "tree-sitter": "^0.15.1",
-    "tree-sitter-verilog": "^0.15.1",
+    "tree-sitter-verilog": "^0.15.5",
     "yargs": "^13.2.4"
   },
   "devDependencies": {

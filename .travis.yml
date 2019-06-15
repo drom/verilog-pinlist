@@ -11,15 +11,6 @@ os:
   - osx
   - windows
 sudo: false
-# dist: trusty
-# env:
-#   - CXX=g++-7
-# addons:
-#   apt:
-#     sources:
-#       - ubuntu-toolchain-r-test
-#     packages:
-#       - g++-7
 install:
   - g++ --version
   - npm --version
