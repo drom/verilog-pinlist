@@ -24,9 +24,9 @@
     "concat-stream": "^2.0.0",
     "fs-extra": "^8.0.1",
     "json5": "^2.1.0",
-    "mathjs": "^5.4.2",
+    "mathjs": "^6.0.2",
     "tree-sitter": "^0.15.1",
-    "tree-sitter-verilog": "^0.14.7",
+    "tree-sitter-verilog": "^0.15.1",
     "yargs": "^13.2.4"
   },
   "devDependencies": {
