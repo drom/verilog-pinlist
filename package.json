@@ -4,8 +4,8 @@
   "description": "extract pinlist from verilog files",
   "main": "./lib/index.js",
   "bin": {
-    "pinlist": "./bin/pinlist.js",
-    "pinlist-simple": "./bin/pinlist-simple.js"
+    "pinlist": "bin/pinlist.js",
+    "pinlist-simple": "bin/pinlist-simple.js"
   },
   "scripts": {
     "test": "eslint lib/ && nyc --reporter=lcov mocha"
@@ -22,19 +22,19 @@
   "homepage": "https://github.com/drom/verilog-pinlist#readme",
   "dependencies": {
     "concat-stream": "^2.0.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.1",
     "json5": "^2.1.0",
-    "mathjs": "^6.0.3",
-    "tree-sitter": "^0.15.7",
-    "tree-sitter-verilog": "^0.16.0",
-    "yargs": "^13.2.4"
+    "mathjs": "^8.0.1",
+    "tree-sitter": "^0.17.1",
+    "tree-sitter-verilog": "^0.19.0",
+    "yargs": "^16.1.1"
   },
   "devDependencies": {
     "@drom/eslint-config": "^0.10.0",
     "chai": "^4.2.0",
-    "eslint": "^5.13.0",
-    "mocha": "^6.1.4",
-    "nyc": "^14.1.1",
+    "eslint": "^7.13.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
     "request": "^2.88.0"
   },
   "eslintConfig": {
