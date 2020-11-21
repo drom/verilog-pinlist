@@ -25,15 +25,12 @@ endmodule
         type: 'module',
         ports: {
           clk: 1,
-          foo: 1,
-          bar: 1,
-          baz: -1,
-          qux: -1,
-          rdata: '-(DWIDTH)',
-          valid: -1,
           wdata: 32,
-          wdata0: 16,
-          wdata1: 16
+          valid: -1,
+          foo: 1, bar: 1,
+          wdata0: 16, wdata1: 16,
+          baz: -1, qux: -1,
+          rdata: '-(DWIDTH)'
         }
       }
     });
@@ -46,7 +43,7 @@ describe('ansi', () => {
   it('simple', () => {
     expect(pl(`
 module bar (
-  input clk,
+  input clk, reset,
   input [31:0] wdata,
   output valid,
   output reg [DWIDTH-1:0] rdata
@@ -57,7 +54,7 @@ endmodule
       bar: {
         type: 'module',
         ports: {
-          clk: 1,
+          clk: 1, reset: 1,
           rdata: '-(DWIDTH)',
           valid: -1,
           wdata: 32
