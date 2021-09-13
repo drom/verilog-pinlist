@@ -7,6 +7,10 @@
     "pinlist": "bin/pinlist.js",
     "pinlist-simple": "bin/pinlist-simple.js"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "scripts": {
     "test": "eslint lib/ && nyc --reporter=lcov mocha"
   },
